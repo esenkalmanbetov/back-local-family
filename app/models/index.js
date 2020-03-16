@@ -23,6 +23,7 @@ db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
 db.categories = require("./category.model")(sequelize, Sequelize);
 db.countries = require("./country.model")(sequelize, Sequelize);
 db.regions = require("./region.model")(sequelize, Sequelize);
+db.users = require("./user.model")(sequelize, Sequelize);
 
 db.regions.belongsTo(db.countries);
 

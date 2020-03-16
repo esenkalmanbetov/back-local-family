@@ -9,8 +9,6 @@ exports.create = (req, res) => {
     return;
   }
 
-  console.log("aaaaaa: ", req.body);
-
   const region = {
     title: req.body.title,
     countryId: req.body.countryId
