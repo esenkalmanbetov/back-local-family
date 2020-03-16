@@ -20,6 +20,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
-db.categories = require("./category.model")(sequelize, Sequelize)
+db.categories = require("./category.model")(sequelize, Sequelize);
+db.countries = require("./country.model")(sequelize, Sequelize);
 
 module.exports = db;

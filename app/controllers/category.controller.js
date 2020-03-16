@@ -1,6 +1,5 @@
 const db = require("../models");
 const Category = db.categories;
-const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
   if (!req.body.title) {
@@ -46,7 +45,7 @@ exports.update = (req, res) => {
       if (num == 1) res.send({ message: "Category was updated successfully." });
       else
         res.send({
-          message: `Cannot update Categery with id=${id}. Maybe Category was not found or rew.body is empty!`
+          message: `Cannot update Categery with id=${id}. Maybe Category was not found or req.body is empty!`
         });
     })
     .catch(err =>

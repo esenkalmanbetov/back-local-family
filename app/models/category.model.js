@@ -3,7 +3,7 @@ module.exports = (sequelize, Sequelize) => {
     title: {
       type: Sequelize.STRING
     }
-  })
+  });
 
-  return Category
-}
+  return Category;
+};
