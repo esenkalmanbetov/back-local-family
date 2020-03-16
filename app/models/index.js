@@ -25,8 +25,10 @@ db.countries = require("./country.model")(sequelize, Sequelize);
 db.regions = require("./region.model")(sequelize, Sequelize);
 db.users = require("./user.model")(sequelize, Sequelize);
 db.families = require("./family.model")(sequelize, Sequelize);
+db.tours = require("./tour.model")(sequelize, Sequelize);
 
 db.regions.belongsTo(db.countries);
 db.families.belongsTo(db.users);
+db.tours.belongsTo(db.users);
 
 module.exports = db;
