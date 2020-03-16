@@ -12,4 +12,6 @@ router.delete("/:id", users.delete);
 
 router.get("/:id", users.findOne);
 
+router.post("/login", users.login);
+
 module.exports = router;

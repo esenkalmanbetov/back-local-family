@@ -89,3 +89,11 @@ exports.findOne = (req, res) => {
       });
     });
 };
+
+exports.login = (req, res) => {
+  const { email, password } = req.body;
+
+  User.findOne({ where: { email, password } })
+    .then(data => res.send(data))
+    .catch(err => res.status(400).send({ message: err.message }));
+};
