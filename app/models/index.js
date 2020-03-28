@@ -30,5 +30,6 @@ db.tours = require("./tour.model")(sequelize, Sequelize);
 db.regions.belongsTo(db.countries);
 db.families.belongsTo(db.users);
 db.tours.belongsTo(db.users);
+db.categories.belongsToMany(db.tours, { through: 'toursCategories'});
 
 module.exports = db;
